@@ -20,20 +20,6 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		imagemin: {
-			dist: {
-				options: {
-					optimizationLevel: 5,
-					progressive: true	
-				},
-        		files: [{
-          			expand: true,
-          			cwd: 'src/img',
-          			src: ['img/*.{jpg,png}'],
-          			dest: 'dist/img',
-        		}]
-      		}
-		},
 
 		htmlmin: {
 			dist: {
@@ -51,5 +37,5 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('default', ['imagemin', 'responsive_images', 'htmlmin']);
+	grunt.registerTask('default', ['responsive_images', 'htmlmin']);
 };
