@@ -517,6 +517,7 @@ function updatePositions() {
   }
   var cachedLength = items.length;
   for (var i = 0; i < cachedLength; i++) {
+    //use transform for moving pizzas and to avoid layout and paint for better performance
     items[i].style.transform = "translateX("+(items[i].basicLeft + (100 * phaseArray[i % 5] - widthMove))+"px)";
   }
 
@@ -533,6 +534,7 @@ function updatePositions() {
 // runs updatePositions on scroll
 window.addEventListener('scroll', rAFScroll);
 
+//use request animation frame for visual changes
 function rAFScroll() {
   requestAnimationFrame(updatePositions);
 }
