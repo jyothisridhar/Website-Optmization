@@ -517,7 +517,6 @@ function updatePositions() {
   }
   var cachedLength = items.length;
   for (var i = 0; i < cachedLength; i++) {
-    //items[i].style.left = items[i].basicLeft + 100 * phaseArray[i % 5] + 'px';
     items[i].style.transform = "translateX("+(items[i].basicLeft + (100 * phaseArray[i % 5] - widthMove))+"px)";
   }
 

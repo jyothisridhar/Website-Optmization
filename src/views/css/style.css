@@ -33,6 +33,7 @@ form {
   position: fixed;
   width: 256px;
   z-index: -1;
+  /*promote mover class to its own layer*/
   will-change: transform;
   transform: translateZ(0);
 }
